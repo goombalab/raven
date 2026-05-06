@@ -1,0 +1,28 @@
+[project]
+name = "raven-attention"
+version = "0.1.0"
+description = "Raven: Routing Memory Attention for Linear Sequence Modeling"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.5",
+    "transformers>=4.53.0,<4.56.0",
+    "datasets>=3.3.0",
+    "einops",
+    "flash-linear-attention",
+]
+
+[project.optional-dependencies]
+eval = ["lm_eval"]
+conv1d = ["causal-conv1d>=1.4.0"]
+
+[project.urls]
+Homepage = "https://github.com/AvivBick/RoutingMemory"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["raven*"]
