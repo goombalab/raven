@@ -265,3 +265,24 @@ assets/img/                     # figures used in this README
 This repo is a fork of [fla-org/flash-linear-attention](https://github.com/fla-org/flash-linear-attention), which provides hardware-efficient Triton-based implementations of many linear attention models. All upstream models (GLA, GSA, DeltaNet, Mamba2, RWKV7, etc.) remain available.
 
 [![hf_model](https://img.shields.io/badge/-Models-gray.svg?logo=huggingface&style=flat-square)](https://huggingface.co/fla-hub) [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vDaJTmKNcS)
+
+-----
+
+## Citation
+
+
+```
+
+@article{afzal2025raven,
+  title={Raven: High-Recall Sequence Modeling with Sparse Memory Routing},
+  author={Arshia Afzal, Aviv Bick, Eric P. Xing, Volkan Cevher, Albert Gu},
+  year={2025},
+  publisher={MDPI}
+}
+
+```
+
+
+
+
+
