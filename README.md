@@ -240,21 +240,17 @@ The `configs/` directory contains 12 ablation configurations varying the router 
 ## Repository Structure
 
 ```
-fla/
+raven/
 ├── layers/
-│   └── raven.py              # RavenAttention layer
-├── models/
-│   └── raven/
-│       ├── configuration_raven.py
-│       ├── modeling_raven.py
-│       └── lg.py               # perplexity evaluation
-└── ops/
+│   └── raven.py                # RavenAttention layer
+└── models/
     └── raven/
-        ├── chunk.py            # chunked Triton kernel (training)
-        ├── fused_recurrent.py  # fused recurrent kernel (inference)
-        └── naive.py            # reference implementation
+        ├── configuration_raven.py
+        └── modeling_raven.py
+
 configs/
-└── raven_340M_*.json         # 12 ablation configs (340M scale)
+└── raven_340M_*.json           # 12 ablation configs (340M scale)
+
 assets/img/                     # figures used in this README
 ```
 
@@ -262,7 +258,7 @@ assets/img/                     # figures used in this README
 
 ## Upstream: Flash Linear Attention
 
-This repo is a fork of [fla-org/flash-linear-attention](https://github.com/fla-org/flash-linear-attention), which provides hardware-efficient Triton-based implementations of many linear attention models. All upstream models (GLA, GSA, DeltaNet, Mamba2, RWKV7, etc.) remain available.
+This repo builds on [fla-org/flash-linear-attention] and depends on it for hardware-efficient Triton kernels. In particular, Raven currently reuses FLA’s GSA chunked and fused recurrent kernels rather than vendoring separate Raven ops in this repository.
 
 [![hf_model](https://img.shields.io/badge/-Models-gray.svg?logo=huggingface&style=flat-square)](https://huggingface.co/fla-hub) [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vDaJTmKNcS)
 
