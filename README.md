@@ -172,7 +172,7 @@ Requirements: PyTorch ≥ 2.5, Triton ≥ 3.0, einops, transformers ≥ 4.45.0
 ### As a layer
 
 ```python
-from fla.layers import RavenAttention
+from raven.layers import RavenAttention
 
 attn = RavenAttention(
     hidden_size=1024,
@@ -192,7 +192,7 @@ y, _, _ = attn(x)  # (batch, seq_len, hidden_size)
 ### As a full causal LM
 
 ```python
-from fla.models import RavenConfig, RavenForCausalLM
+from raven.models import RavenConfig, RavenForCausalLM
 from transformers import AutoModelForCausalLM
 
 config = RavenConfig(
