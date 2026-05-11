@@ -58,7 +58,6 @@ Key design choices:
 - **Sparse top-k routing** — each token writes to a small subset of memory slots
 - **Gumbel noise** during training for exploration (optional)
 - **Mamba2 or GLA decay** for the forgetting gate
-- **RoPE** on Q/K (optional)
 - **Chunked Triton kernels** for training, fused recurrent kernels for generation
 
 ---
